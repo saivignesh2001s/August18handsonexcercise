@@ -4,22 +4,21 @@
     {
         static void Main(string[] args)
         {
-            int i, j;
-            Console.WriteLine("Enter the numbers");
-            i=Convert.ToInt32(Console.ReadLine());
-            j=Convert.ToInt32(Console.ReadLine());
-            if (i > j)
+            int i;
+            string s = " ";
+            int sum = 100;
+            for(i = 0; i < 4; i++)
             {
-                Console.WriteLine("{0} is max", i);
-                Console.WriteLine("{0} is min", j);
+                s=Console.ReadLine();
+                if (s.Equals("HIT")){
+                    sum += 10;
+                }
+                else if (s.Equals("MISS")){
+                    sum -= 20;
+                }
             }
-            else if (i == j)
-                Console.WriteLine("{0} is equals {1}", i, j);
-            else
-            {
-                Console.WriteLine("{0} is max", j);
-                Console.WriteLine("{0} is min", i);
-            }
+            Console.WriteLine(sum);
+            Console.ReadLine();
         }
     }
 }
