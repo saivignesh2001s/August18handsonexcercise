@@ -10,16 +10,16 @@
             j=Convert.ToInt32(Console.ReadLine());
             if (i > j)
             {
-                Console.WriteLine("{0} is max", i);
-                Console.WriteLine("{0} is min", j);
+                Console.WriteLine("{0} is biggest", i);
+              
             }
-            else if (i == j)
-                Console.WriteLine("{0} is equals {1}", i, j);
+            else if (j > i)
+                Console.WriteLine("{0} is biggest", j);
             else
             {
-                Console.WriteLine("{0} is max", j);
-                Console.WriteLine("{0} is min", i);
+                Console.WriteLine("{0} is equals to {i}",i,j);
             }
+            Console.ReadLine();
         }
     }
 }
