@@ -4,22 +4,19 @@
     {
         static void Main(string[] args)
         {
-            int i, j;
+            int n;
             Console.WriteLine("Enter the numbers");
-            i=Convert.ToInt32(Console.ReadLine());
-            j=Convert.ToInt32(Console.ReadLine());
-            if (i > j)
+            n=Convert.ToInt32(Console.ReadLine());
+            int i,j=1, sum = 0;
+            for (i = 1; i <= n; i++)
             {
-                Console.WriteLine("{0} is max", i);
-                Console.WriteLine("{0} is min", j);
+                Console.WriteLine(j);
+                sum = sum + j;
+                j = j + 2;
+
             }
-            else if (i == j)
-                Console.WriteLine("{0} is equals {1}", i, j);
-            else
-            {
-                Console.WriteLine("{0} is max", j);
-                Console.WriteLine("{0} is min", i);
-            }
+            Console.WriteLine(sum);
+            Console.ReadLine();
         }
     }
 }
