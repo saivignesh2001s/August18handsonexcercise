@@ -4,21 +4,17 @@
     {
         static void Main(string[] args)
         {
+            int n;
+            Console.WriteLine("Enter the number");
+            n=Convert.ToInt32(Console.ReadLine());
             int i, j;
-            Console.WriteLine("Enter the numbers");
-            i=Convert.ToInt32(Console.ReadLine());
-            j=Convert.ToInt32(Console.ReadLine());
-            if (i > j)
+            for (i = 1; i <= n; i++)
             {
-                Console.WriteLine("{0} is max", i);
-                Console.WriteLine("{0} is min", j);
-            }
-            else if (i == j)
-                Console.WriteLine("{0} is equals {1}", i, j);
-            else
-            {
-                Console.WriteLine("{0} is max", j);
-                Console.WriteLine("{0} is min", i);
+                for (j = 1; j <= i; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.Write("\n");
             }
         }
     }
