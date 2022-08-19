@@ -4,22 +4,34 @@
     {
         static void Main(string[] args)
         {
-            int i, j;
+            int i;
             Console.WriteLine("Enter the numbers");
             i=Convert.ToInt32(Console.ReadLine());
-            j=Convert.ToInt32(Console.ReadLine());
-            if (i > j)
+            if (i == 0)
+                Console.WriteLine("zero");
+            else if (i % 2 == 0)
             {
-                Console.WriteLine("{0} is max", i);
-                Console.WriteLine("{0} is min", j);
+                Console.WriteLine("even");
+                if (i % 10 == 0)
+                {
+                    Console.WriteLine("multiple of 10");
+                }
+                else
+                {
+                    Console.WriteLine("not a multiple of 10");
+                }
+                if (i > 100)
+                    Console.WriteLine("too large");
             }
-            else if (i == j)
-                Console.WriteLine("{0} is equals {1}", i, j);
             else
             {
-                Console.WriteLine("{0} is max", j);
-                Console.WriteLine("{0} is min", i);
+                Console.WriteLine("odd");
+                Console.WriteLine("not a multiple of 10");
+                if (i > 100)
+                    Console.WriteLine("too large");
+
             }
+            Console.ReadLine();
         }
     }
 }
