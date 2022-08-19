@@ -4,22 +4,28 @@
     {
         static void Main(string[] args)
         {
-            int i, j;
+            int i, j,k;
             Console.WriteLine("Enter the numbers");
             i=Convert.ToInt32(Console.ReadLine());
             j=Convert.ToInt32(Console.ReadLine());
-            if (i > j)
+            k=Convert.ToInt32(Console.ReadLine());
+            if(i>=j && i >= k)
             {
-                Console.WriteLine("{0} is max", i);
-                Console.WriteLine("{0} is min", j);
+                Console.WriteLine("{0} is largest", i);
             }
-            else if (i == j)
-                Console.WriteLine("{0} is equals {1}", i, j);
+            if(j>i && j>k)
+            {
+                Console.WriteLine("{0} is largest", j);
+            
+        }
             else
             {
-                Console.WriteLine("{0} is max", j);
-                Console.WriteLine("{0} is min", i);
-            }
+                Console.WriteLine("{0} is largest", k);
+            
+        }
+            Console.ReadLine();
+
+
         }
     }
 }
