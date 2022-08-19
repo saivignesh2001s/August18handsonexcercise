@@ -5,21 +5,20 @@
         static void Main(string[] args)
         {
             int i, j;
-            Console.WriteLine("Enter the numbers");
-            i=Convert.ToInt32(Console.ReadLine());
-            j=Convert.ToInt32(Console.ReadLine());
-            if (i > j)
+            i = 0;
+            j = 25;
+
+            for (i = 0, j = 25; i < 25 && j >= 0; i++, j--)
             {
-                Console.WriteLine("{0} is max", i);
-                Console.WriteLine("{0} is min", j);
+                if (i > j)
+                {
+                    Console.WriteLine("Crossed Over");
+                    break;
+                }
+                Console.WriteLine("{0} {1}", i, j);
+               
             }
-            else if (i == j)
-                Console.WriteLine("{0} is equals {1}", i, j);
-            else
-            {
-                Console.WriteLine("{0} is max", j);
-                Console.WriteLine("{0} is min", i);
-            }
+            Console.ReadLine();
         }
     }
 }
